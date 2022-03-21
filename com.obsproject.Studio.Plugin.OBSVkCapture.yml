@@ -17,14 +17,15 @@ modules:
       - -DLIBOBS_INCLUDE_DIR=/app/include/obs
     post-install:
       - install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo ${FLATPAK_ID}.metainfo.xml
-      - appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak ${FLATPAK_ID}
+      - appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak
+        ${FLATPAK_ID}
     cleanup:
-      - '/bin'
+      - /bin
     sources:
       - type: git
         url: https://github.com/nowrep/obs-vkcapture.git
-        tag: v1.1.2
-        commit: a043a22fb58c67ee2f8ec58990b58a7ec060c110
+        tag: v1.1.3
+        commit: 28d324e8e998390338637a57c479c1b9c5e565e8
         x-checker-data:
           type: git
           is-main-source: true
