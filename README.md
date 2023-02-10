@@ -8,7 +8,7 @@ For this plugin to work you also need the corresponding tools to start the appli
 Installation
 -----------
 
-This plugin is an extension for OBS Studio therefore is not listed on the Flathub website to download it.
+This flatpak is an extension for OBS Studio and is therefore not listed on the Flathub website.
 
 To install this plugin you need to run this command in a terminal:
 
