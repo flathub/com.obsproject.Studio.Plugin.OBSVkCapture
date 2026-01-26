@@ -2,10 +2,9 @@ id: com.obsproject.Studio.Plugin.OBSVkCapture
 branch: stable
 runtime: com.obsproject.Studio
 runtime-version: stable
-sdk: org.kde.Sdk//6.6
+sdk: org.kde.Sdk//6.8
 build-extension: true
 separate-locales: false
-appstream-compose: false
 build-options:
   prefix: /app/plugins/OBSVkCapture
   strip: true
@@ -17,9 +16,7 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
       - -DLIBOBS_INCLUDE_DIR=/app/include/obs
     post-install:
-      - install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo ${FLATPAK_ID}.metainfo.xml
-      - appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak
-        ${FLATPAK_ID}
+      - install -Dpm0644 -t ${FLATPAK_DEST}/share/metainfo ${FLATPAK_ID}.metainfo.xml
     # Remove capture tools and libraries from final build
     cleanup:
       - /bin
