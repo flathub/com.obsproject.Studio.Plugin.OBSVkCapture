@@ -1,7 +1,7 @@
 id: com.obsproject.Studio.Plugin.OBSVkCapture
-branch: stable
+branch: beta
 runtime: com.obsproject.Studio
-runtime-version: stable
+runtime-version: beta
 sdk: org.kde.Sdk//6.8
 build-extension: true
 separate-locales: false
